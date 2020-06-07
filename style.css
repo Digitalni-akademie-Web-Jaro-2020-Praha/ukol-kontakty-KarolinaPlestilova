@@ -1,10 +1,77 @@
-/* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
-
-body {
-	font-family: sans-serif;
-	font-size: 14px;
+* nejsme vcerejsi,
+pouzivame moderni box model */ html {
+  box-sizing: border-box;
 }
-
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+}
 /* ---------------------------------------------------- */
+h1 {
+  text-align: center;
+}
+.tym {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+img {
+  border-radius: 50%;
+}
+.osoba {
+  border: 1px;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 1em;
+  box-shadow: 0 2px 4px rgba(0, 255, 255, 0.15);
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  flex-grow: 1;
+}
+@media (min-width: 540px) {
+  .tym {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .osoba {
+    text-align: center;
+    display: flex;
+  }
+  .popis {
+    max-height: 150px;
+  }
+  .foto {
+    flex-shrink: 0;
+  }
+  img {
+    float: left;
+    margin-right: 20px;
+    max-height: 120px;
+  }
+}
+@media (min-width: 960px) {
+  .tym {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .osoba {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .foto {
+    margin: 0;
+    max-width: 120px;
+    margin: 0 auto;
+  }
+  img {
+    float: none;
+  }
+}
